@@ -1,23 +1,28 @@
 require 'sinatra'
 
 get '/' do
-	"hello!"
+  "hello!"
 end 
 
 get '/secret' do
-	"Nothing to see here...move along, now!"
+  "Nothing to see here...move along, now!"
 end 
 
 get '/random-cat' do
-	 @name = ["Viking", "Amigo", "Oscar"].sample
-	 erb(:index)
+   @name = ["Viking", "Amigo", "Oscar"].sample
+   erb(:index)
 end 
 
 
-get '/named-cat' do
-  p params.values
-	 @name = params[:name]
-	 erb(:index)
+post '/named-cat' do
+  p params
+   @name = params[:name]
+   erb(:index)
 end 
 
 
+get '/name-cat' do
+  p params
+   @name = params[:name]
+   erb(:index)
+end 
