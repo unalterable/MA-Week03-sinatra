@@ -1,13 +1,5 @@
-require 'sinatra'
+<div style='border: 3px dashed red'>
+<img src='http://bit.ly/1eze8aE'>
+</div>
 
-get '/' do
-	"hello!"
-end 
-
-get '/secret' do
-	"Nothing to see here...move along, now!"
-end 
-
-get '/cat' do
-	erb(:index)
-end 
+<h1> My name is <%= @name %> </h1>
